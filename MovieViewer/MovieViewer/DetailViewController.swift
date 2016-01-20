@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
         titleLabel.text = movie["title"] as? String;
         
         overviewLabel.text = movie["overview"] as? String;
+        overviewLabel.sizeToFit();
         
         
         let baseUrl = "http://image.tmdb.org/t/p/w500";
