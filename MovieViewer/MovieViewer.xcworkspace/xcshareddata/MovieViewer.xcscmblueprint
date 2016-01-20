@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2D29A9D23CE3C4EFEA723A637B2F4E58657B596D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2D29A9D23CE3C4EFEA723A637B2F4E58657B596D" : 0,
+    "35674CC05D9B4D99A4EA9B220027EFD2983A3979" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1C6B7A7-9D26-4FC8-ADB7-AC68B993791E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2D29A9D23CE3C4EFEA723A637B2F4E58657B596D" : "Flicks\/",
+    "35674CC05D9B4D99A4EA9B220027EFD2983A3979" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MovieViewer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MovieViewer\/MovieViewer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/progdude\/Flicks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D29A9D23CE3C4EFEA723A637B2F4E58657B596D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/progdude\/CodePath.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35674CC05D9B4D99A4EA9B220027EFD2983A3979"
+    }
+  ]
+}
