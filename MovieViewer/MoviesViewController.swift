@@ -21,7 +21,9 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
     var refreshControl: UIRefreshControl!
     
     var movies:[NSDictionary]?;
-    var filteredResults: [NSDictionary]!
+    var filteredResults: [NSDictionary]!;
+    
+    var endPoint:String!;
     
     override func viewDidLoad() {
         collView.dataSource = self;
@@ -35,7 +37,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         collView.insertSubview(refreshControl, atIndex: 0)
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
+        let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endPoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession(
             configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
