@@ -40,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let tabBarController = UITabBarController();
-        tabBarController.viewControllers = [nowPlayingNavigationController,topRatedNavigationController,about];
+        tabBarController.viewControllers = [nowPlayingNavigationController,about,topRatedNavigationController];
+        tabBarController.selectedIndex = 1;
+
         window?.rootViewController = tabBarController;
         window?.makeKeyAndVisible();
         

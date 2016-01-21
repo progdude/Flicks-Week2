@@ -29,6 +29,8 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         collView.dataSource = self;
         networkLabel.hidden = true;
         searchBar.delegate = self;
+        self.navigationController?.navigationBarHidden = true
+
         
 
         
@@ -36,6 +38,14 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
         collView.insertSubview(refreshControl, atIndex: 0)
         
+        
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+    
+    func apiMethod(){
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = NSURL(string:"https://api.themoviedb.org/3/movie/\(endPoint)?api_key=\(apiKey)")
         let request = NSURLRequest(URL: url!)
@@ -52,7 +62,8 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
                         data, options:[]) as? NSDictionary {
                             
                             
-                            self.movies = responseDictionary["results"] as! [NSDictionary];
+                            self.movies = responseDictionary["results"] as? [NSDictionary]!;
+                            
                             self.filteredResults = self.movies;
                             self.collView.reloadData();
                     }
@@ -63,21 +74,24 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
                 }
         });
         task.resume()
-        
-        
-
-        // Do any additional setup after loading the view.
     }
+    
+    
     
     override func viewWillAppear(animated: Bool) {
-        animateCollection();
+        apiMethod();
+        
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false;
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
 
     
@@ -168,28 +182,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         view.endEditing(true)
     }
     
-    func animateCollection() {
-        collView.reloadData()
-        
-        let cells = collView.visibleCells()
-        let collHeight: CGFloat = collView.bounds.size.height
-        
-        for i in cells {
-            let cell: UICollectionViewCell = i as UICollectionViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, collHeight)
-        }
-        
-        var index = 0
-        
-        for a in cells {
-            let cell: UICollectionViewCell = a as UICollectionViewCell
-            UIView.animateWithDuration(4, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                }, completion: nil)
-            
-            index += 1
-        }
-    }
+
     
     
     
