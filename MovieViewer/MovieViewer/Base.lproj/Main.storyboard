@@ -5,54 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="VYW-Aw-lnt">
-            <objects>
-                <viewController id="88q-j0-p0c" customClass="homeViewController" customModule="MovieViewer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ALD-7i-ThV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gSr-gk-HRg">
-                                <rect key="frame" x="114" y="230" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start Here">
-                                    <color key="titleColor" red="0.036734532828282873" green="0.024197423264849246" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodePath" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1h1-6s-IF7">
-                                <rect key="frame" x="20" y="106" width="280" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="56"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie.png" id="xbn-pc-5Hs">
-                                <rect key="frame" x="54" y="329" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20470328282828287" green="0.20470328282828287" blue="0.20470328282828287" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6Jt-tb-NLN"/>
-                    <connections>
-                        <outlet property="mainImage" destination="xbn-pc-5Hs" id="cz2-S1-iwd"/>
-                        <outlet property="startButton" destination="gSr-gk-HRg" id="URx-Qs-lEq"/>
-                        <outlet property="titleLable" destination="1h1-6s-IF7" id="TjF-Tr-vii"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cFb-ej-LTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="553" y="770"/>
-        </scene>
         <!--Movies View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -136,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="382"/>
+            <point key="canvasLocation" x="563" y="576"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="gQw-4O-A0a">
@@ -229,9 +181,6 @@
             <point key="canvasLocation" x="107" y="382"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="movie.png" width="128" height="128"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SHJ-EG-r4U"/>
     </inferredMetricsTieBreakers>

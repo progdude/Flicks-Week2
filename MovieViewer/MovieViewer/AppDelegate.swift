@@ -33,9 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         topRatedViewController.endPoint = "top_rated";
         topRatedNavigationController.tabBarItem.title="Top Rated";
         
+        let about = homeViewController(nibName: "AboutView", bundle: nil)
+        about.tabBarItem.title = "About"
+        
+   
+        
         
         let tabBarController = UITabBarController();
-        tabBarController.viewControllers = [nowPlayingNavigationController,topRatedNavigationController];
+        tabBarController.viewControllers = [nowPlayingNavigationController,topRatedNavigationController,about];
         window?.rootViewController = tabBarController;
         window?.makeKeyAndVisible();
         
