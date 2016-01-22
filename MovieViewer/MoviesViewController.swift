@@ -79,6 +79,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
     
     
     override func viewWillAppear(animated: Bool) {
+        
         apiMethod();
         
     }

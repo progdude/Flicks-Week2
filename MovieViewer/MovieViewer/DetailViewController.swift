@@ -40,6 +40,10 @@ class DetailViewController: UIViewController {
        
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true;
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

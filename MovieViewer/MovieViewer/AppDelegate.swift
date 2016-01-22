@@ -27,22 +27,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController;
         nowPlayingViewController.endPoint = "now_playing";
         nowPlayingNavigationController.tabBarItem.title="Now Playing";
+        nowPlayingNavigationController.tabBarItem.image = UIImage(named: "now_playing.png");
         
         let topRatedNavigationController = storyboard.instantiateViewControllerWithIdentifier("MovieNavigationController") as! UINavigationController;
         let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController;
         topRatedViewController.endPoint = "top_rated";
         topRatedNavigationController.tabBarItem.title="Top Rated";
+        topRatedNavigationController.tabBarItem.image = UIImage(named: "star.png");
+        
+        
+        
         
         let about = homeViewController(nibName: "AboutView", bundle: nil)
-        about.tabBarItem.title = "About"
+        
         
    
         
         
         let tabBarController = UITabBarController();
         tabBarController.viewControllers = [nowPlayingNavigationController,about,topRatedNavigationController];
+        
+        let tabBar = tabBarController.viewControllers![1].tabBarItem as UITabBarItem;
+        tabBar.enabled = false;
+        
+        
+        //about.tabBarItem. = true;
         tabBarController.selectedIndex = 1;
-
+        //about.tabBarController.
         window?.rootViewController = tabBarController;
         window?.makeKeyAndVisible();
         
