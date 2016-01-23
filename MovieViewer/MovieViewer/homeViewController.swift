@@ -33,19 +33,19 @@ class homeViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-        titleLable.frame.origin.x -= view.bounds.width;
-        startButton.frame.origin.x += view.bounds.width
-        secondLabel.frame.origin.y += view.bounds.height;
-        mainImage.frame.origin.y -= view.bounds.height;
+        titleLable.frame.origin.y -= view.bounds.height;
+        startButton.frame.origin.y += view.bounds.height
+        secondLabel.frame.origin.y -= view.bounds.height;
+        mainImage.frame.origin.y += view.bounds.height;
         
     }
     
     private func slideIn(){
         UIView.animateWithDuration(1, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.titleLable.frame.origin.x += self.view.bounds.width;
-            self.startButton.frame.origin.x -= self.view.bounds.width;
-            self.secondLabel.frame.origin.y -= self.view.bounds.height;
-            self.mainImage.frame.origin.y += self.view.bounds.height;
+            self.titleLable.frame.origin.y += self.view.bounds.height;
+            self.startButton.frame.origin.y -= self.view.bounds.height;
+            self.secondLabel.frame.origin.y += self.view.bounds.height;
+            self.mainImage.frame.origin.y -= self.view.bounds.height;
             
             self.view.layoutIfNeeded()
             }, completion: nil);

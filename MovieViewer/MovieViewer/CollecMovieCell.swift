@@ -12,4 +12,5 @@ class CollecMovieCell: UICollectionViewCell {
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     
+    @IBOutlet var popularity: UILabel!
 }

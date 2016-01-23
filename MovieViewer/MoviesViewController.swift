@@ -110,9 +110,9 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollCell", forIndexPath: indexPath) as! CollecMovieCell
         
         let movie = filteredResults[indexPath.row];
-        let title = movie["title"] as! String;
         let rating = movie["vote_average"] as! Double;
         let baseUrl = "http://image.tmdb.org/t/p/w500";
+        let pop = movie["popularity"] as! Double;
         
         if let posterPath = movie["poster_path"] as! String!{
             let posterUrl = NSURL(string: baseUrl+posterPath);
@@ -122,8 +122,10 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         
         
         cell.ratingLabel.text = "\(rating)";
-        //cell.titleLabel.text = title;
-        
+        cell.popularity.text = String(format: "%.2f", pop);
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.orangeColor()
+        cell.selectedBackgroundView = backgroundView
         return cell;
     }
     
@@ -183,6 +185,7 @@ class MoviesViewController: UIViewController, UICollectionViewDataSource, UISear
         view.endEditing(true)
     }
     
+
 
     
     
